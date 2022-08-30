@@ -1,0 +1,22 @@
+# Grasshopper Data Engineering Case Study
+## DataMart Logical Design
+
+In this section we will provide insight on how to generate a data warehouse to solve this problem efficiently
+
+## DataMart Characteristic
+- Data Warehouse Style: Kimball model (Bottom up), star schema
+  - Business process oriented
+  - Fast designing
+  - Data is not complexed yet (though can be prone to extension in future)
+    - Nonetheless, type of order tend to be slow changing.
+
+Note*
+- Top-down Inmon might be preferred if there is more time:
+  - Effort for implementing requirement changes is lower
+  - Benefits in term of future maintainance cost
+
+- Update style: Minutes batches (as per design), easy extensible for unifying with a real time application
+
+- Architecture: component of Lambda architecture (Batch layer)
+
+Please refer to document indexed with 3_1 & 3_2 for details

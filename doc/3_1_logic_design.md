@@ -1,16 +1,4 @@
 # Grasshopper Data Engineering Case Study
-## DataMart Logical Design
-- Data Warehouse Choice: Kimball model:
-  - Business process oriented
-  - Fast designing
-  - Data is not complexed yet (though can be prone to extension in future)
-    - Nonetheless, type of order tend to be slow changing.
-
-Note*
-- Top-down Inmon might be preferred if there is more time:
-  - Effort for implementing requirement changes is lower
-  - Benefits in term of future maintainance cost
-
 ### Logical Design
 - Business Process: order.
 - Granularity: 1 entries per atomic order:
@@ -33,7 +21,7 @@ Required metrics:
 - Source table:
   - From data csv, we should ingest our data into table separated by minutes ods__raw_order
   - This table should have the same schema, but partition by order time (rounded by minutes)
-  
+
 - Dimension table: both date time & orders should be degenerate dimension, as order is already a fact it self. Thus no dim order is needed:
   - ~~dim_date~~
   - ~~dim_order~~
